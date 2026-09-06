@@ -13,6 +13,26 @@ Acesse o console do S3 e crie uma estrutura baseada no padrão `dio-live-datalak
 * `s3://{seu_bucket}/output/`
 * `s3://{seu_bucket}/temp/`
 
+## Instruções
+
+* Acessar S3: https://s3.console.aws.amazon.com/s3/ 
+  * Criar estrutura de data lake : _dio-live-datalake_
+  * Criar estrutura de pastas:
+    * _data_
+    * _output_
+    * _temp_
+* Acessar EMR: https://console.aws.amazon.com/elasticmapreduce/
+    * O cluster será criado pelo MrJob e não pelo console
+    * Infraestrutura como código 
+* Criar chave SSH
+    * Acessar  Console do EC2: https://console.aws.amazon.com/ec2/ -> Key Pairs -> Create Key Pair	
+    * Download .pem file
+* Obter Id e chave secreta AWS para configurar MrJob
+   * Profile
+   * My Security Credentials: https://console.aws.amazon.com/iam/home?region={region}#/security_credentials
+   * Access Keys - Create new access key
+   * Fazer download - única chance de visualizar
+
 ## Execução
 1. Faça o upload do arquivo de texto (ex: `sherlock.txt`) para o diretório de dados no seu S3.
 2. Configure suas credenciais e chaves SSH editando o arquivo `mrjob.conf`.
